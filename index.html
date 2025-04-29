@@ -10,11 +10,42 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <title>Pig Game</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
+    <div class="overlay hidden"></div>
+    <div class="modal hidden">
+      <i class="fa-solid fa-circle-xmark close-modal"></i>
+      <h2>How to Play</h2>
+      <p>
+        🎲 Roll the dice as many times as you like to add to your
+        <strong>Current</strong> score.
+      </p>
+      <p>
+        ⚡ If you roll a 1, you lose your <strong>Current</strong> score and
+        it's the next player's turn.
+      </p>
+      <p>
+        📥 Click <strong>Hold</strong> to add your
+        <strong>Current</strong> score to your <strong>Total</strong> score.
+      </p>
+      <p>🏆 First player to reach 100 points wins!</p>
+      <p style="color: red">
+        <strong
+          >NOTE!!! (This game can't be played online but on the same device
+          Only)</strong
+        >
+      </p>
+    </div>
     <main>
       <section class="player player--0 player--active">
-        <i class="fa-solid fa-circle-exclamation exclamation"></i>
+        <div class="exclamation-container">
+          <i class="fa-solid fa-circle-exclamation exclamation"></i>
+          <p>How to play</p>
+        </div>
         <h2 class="name" id="name--0">Player 1</h2>
         <p class="score" id="score--0">43</p>
         <div class="current">

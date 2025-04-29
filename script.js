@@ -1,4 +1,9 @@
 'use strict';
+// Selecting modal elements
+const modal = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+const btnCloseModal = document.querySelector('.close-modal');
+const btnOpenModal = document.querySelector('.exclamation');
 
 // Selecting elements
 const player0EL = document.querySelector('.player--0');
@@ -105,3 +110,18 @@ btnHold.addEventListener('click', function () {
 
 // Resetting to a New Game
 btnNew.addEventListener('click', init);
+
+// How to play the game modal
+const openModal = function () {
+  modal.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+};
+
+const closeModal = function () {
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+};
+
+btnOpenModal.addEventListener('click', openModal);
+btnCloseModal.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
